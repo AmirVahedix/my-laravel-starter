@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Vazir';
+        font-weight: 100;
+        src: url(../assets/fonts/Vazir-Thin.woff) format("woff");
+    }
+    @font-face {
+        font-family: 'Vazir';
+        font-weight: 300;
+        src: url(../assets/fonts/Vazir-Light.woff) format("woff");
+    }
+    @font-face {
+        font-family: 'Vazir';
+        font-weight: 400;
+        src: url(../assets/fonts/Vazir.woff) format("woff");
+    }
+    @font-face {
+        font-family: 'Vazir';
+        font-weight: 500;
+        src: url(../assets/fonts/Vazir-Medium.woff) format("woff");
+    }
+    @font-face {
+        font-family: 'Vazir';
+        font-weight: 700;
+        src: url(../assets/fonts/Vazir-Bold.woff) format("woff");
+    }
+    @font-face {
+        font-family: 'Vazir';
+        font-weight: 900;
+        src: url(../assets/fonts/Vazir-Black.woff) format("woff");
+    }
+
+    .btn {
+        @apply inline-flex items-center px-4 py-2 bg-blue-600 border border-transparent rounded-md font-medium text-white hover:bg-blue-700 disabled:opacity-25 transition ease-in-out duration-150
+    }
+
+    .btn-sm {
+        @apply inline-flex items-center px-2 py-1 text-sm bg-blue-600 border border-transparent rounded-md font-medium text-white hover:bg-blue-700 disabled:opacity-25 transition ease-in-out duration-150
+    }
+
+    .center {
+        @apply flex items-center justify-center;
+    }
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span, input, button, a, label {
+    font-family: 'Vazir', serif !important;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+@layer utilities {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    body::-webkit-scrollbar {
+        width: .2em !important;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: #1D4ED8 !important;
+    }
+
+    nav::-webkit-scrollbar {
+        width: 0 !important;
+    }
+
+    th, td {
+        white-space: nowrap;
+    }
+}
